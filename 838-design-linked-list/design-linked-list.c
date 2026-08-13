@@ -7,7 +7,7 @@ struct Node {
 };
 
 typedef struct {
-    struct Node *dummy;  // dummy head, never holds real data
+    struct Node *dummy;
     int size;
 } MyLinkedList;
 
@@ -57,7 +57,7 @@ void myLinkedListAddAtTail(MyLinkedList *obj, int val) {
 }
 
 void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
-    if (index > obj->size) return;      // too far, don't insert
+    if (index > obj->size) return;      // too far,
     if (index < 0) index = 0;           // (LeetCode treats negative index as 0)
 
     struct Node *prev = obj->dummy;
